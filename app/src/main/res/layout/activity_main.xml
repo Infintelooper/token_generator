@@ -75,6 +75,27 @@
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/shop_select_bar" />
 
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="74dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginRight="168dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/regular"
+        android:text="@string/shop_name"
+        android:textColor="@color/hardgray"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintEnd_toEndOf="@+id/imageView8"
+        app:layout_constraintHorizontal_bias="0.595"
+        app:layout_constraintStart_toStartOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginEnd="168dp"
+        android:layout_marginStart="74dp" />
+
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="wrap_content"
@@ -194,6 +215,23 @@
         app:layout_constraintVertical_bias="0.35"
         app:srcCompat="@drawable/token_slip" />
 
+    <TextView
+        android:id="@+id/user_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="146dp"
+        android:layout_marginTop="144.1dp"
+        android:layout_marginRight="146dp"
+        android:layout_marginBottom="362.4dp"
+        android:fontFamily="@font/regular"
+        android:text="@string/id"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
@@ -210,7 +248,7 @@
         app:srcCompat="@drawable/mask_area" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/user_token"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/token"
@@ -221,6 +259,36 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
         app:layout_constraintStart_toStartOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+    <TextView
+        android:id="@+id/user_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:text="@string/time"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_marginRight="146dp" android:layout_marginLeft="146dp"
+        android:layout_marginTop="359.1dp" android:layout_marginBottom="147.4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/shop_id"
+        android:layout_marginTop="33dp" android:layout_marginBottom="30dp"
+        android:layout_marginLeft="220dp" android:layout_marginRight="129dp"
+        android:fontFamily="@font/bold" android:textSize="17sp" android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintEnd_toEndOf="@+id/imageView8"
+        app:layout_constraintStart_toStartOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        android:layout_marginEnd="129dp"
+        android:layout_marginStart="220dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

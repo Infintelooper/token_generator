@@ -2,4 +2,8 @@
     <string name="app_name">Token Generator</string>
     <string name="desc">Image</string>
     <string name="token">220</string>
+    <string name="id">198063</string>
+    <string name="time">10:10 AM</string>
+    <string name="shop_name">The Sock Market</string>
+    <string name="shop_id">198</string>
 </resources>
