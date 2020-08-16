@@ -5,3 +5,4 @@
             val intent = Intent(this, test::class.java)
             startActivity(intent)
         }*/
+https://developer.android.com/training/transitions/start-activity
