@@ -129,7 +129,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/navigation_bar"
         app:layout_constraintTop_toTopOf="@+id/navigation_bar"
-        app:srcCompat="@drawable/history_icon" />
+        app:srcCompat="@drawable/history_icon"
+        app:tint="@color/red" />
 
     <ImageView
         android:id="@+id/imageView12"
