@@ -37,12 +37,15 @@
         android:layout_marginTop="100dp"
         android:layout_marginBottom="629dp"
         android:contentDescription="@string/desc"
+        android:elevation="5dp"
+        android:translationZ="5dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline4"
         app:srcCompat="@drawable/shop_select_bar"
-        tools:targetApi="lollipop" />
+        tools:targetApi="lollipop"/>
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
@@ -117,6 +120,18 @@
         app:layout_constraintTop_toTopOf="@+id/guideline3"
         android:layout_alignTop="@id/page_select_bar"
         app:srcCompat="@drawable/history_icon"
+        android:contentDescription="@string/desc" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="409dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.93"
+        app:srcCompat="@drawable/shadow"
         android:contentDescription="@string/desc" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
