@@ -1,0 +1,7 @@
+ window.decorView.apply {
+            systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_FULLSCREEN
+        }
+        /*imageView10.setOnClickListener{
+            val intent = Intent(this, test::class.java)
+            startActivity(intent)
+        }*/
