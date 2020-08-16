@@ -10,4 +10,6 @@
     <color name="green">#23BF78</color>
     <color name="red">#BF2323</color>
 
+    <color name="black_overlay">#66000000</color>
+
 </resources>

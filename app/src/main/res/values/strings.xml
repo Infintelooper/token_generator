@@ -6,4 +6,7 @@
     <string name="time">10:10 AM</string>
     <string name="shop_name">The Sock Market</string>
     <string name="shop_id">198</string>
+    <string name="title_activity_home">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
