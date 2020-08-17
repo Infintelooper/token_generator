@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         home_icon.setOnClickListener(){
             Log.i("MyClass.getView() — get item number", "MyClass.getView() — get item number")
 
