@@ -12,7 +12,6 @@ class MainActivity : AppCompatActivity() {
 
         val clockFragment= clock()
 
-        bottom
 
     }
 
