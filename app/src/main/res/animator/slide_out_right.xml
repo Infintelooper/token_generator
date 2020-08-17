@@ -5,7 +5,7 @@
         android:duration="500"
         android:propertyName="x"
         android:valueFrom="0"
-        android:valueTo="wrap_content"
+        android:valueTo="-1440"
         android:valueType="floatType" />
 
 </set>

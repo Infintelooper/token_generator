@@ -17,22 +17,38 @@ class MainActivity : AppCompatActivity() {
         val homeFragment = home()
 
         makeCurrentFragment(homeFragment)
-        home_icon.setOnClickListener(){
-            makeCurrentFragment(clockFragment)
-
-
+        history_icon.setOnClickListener(){
+            makeCurrentFragmentLtR(clockFragment)
+        }
+        home_icon.setOnClickListener() {
+            makeCurrentFragmentRtL(homeFragment)
 
         }
-
     }
-    private fun makeCurrentFragment(fragment: Fragment)
-    {
+    private fun makeCurrentFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().apply {
-        setCustomAnimations(R.animator.slide_in_left,
-                            R.animator.slide_out_right, 0, 0)
-            replace(R.id.fl_wrapper,fragment)
+            replace(R.id.fl_wrapper, fragment)
             commit()
         }
+    }
+    private fun makeCurrentFragmentLtR(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().apply {
+            setCustomAnimations(
+                R.animator.slide_in_left,
+                R.animator.slide_out_right, 0, 0
+            )
+            replace(R.id.fl_wrapper, fragment)
+            commit()
+        }
+    }
+        private fun makeCurrentFragmentRtL(fragment: Fragment)
+        {
+            supportFragmentManager.beginTransaction().apply {
+                setCustomAnimations(R.animator.slide_out_right,
+                    R.animator.slide_in_left, 0, 0)
+                replace(R.id.fl_wrapper,fragment)
+                commit()
+            }
 
 
 
