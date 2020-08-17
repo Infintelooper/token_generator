@@ -18,10 +18,10 @@ class MainActivity : AppCompatActivity() {
 
         makeCurrentFragment(homeFragment)
         history_icon.setOnClickListener(){
-            makeCurrentFragmentLtR(clockFragment)
+            makeCurrentFragmentAnim(clockFragment)
         }
         home_icon.setOnClickListener() {
-            makeCurrentFragmentRtL(homeFragment)
+            makeCurrentFragmentAnim(homeFragment)
 
         }
     }
@@ -31,27 +31,27 @@ class MainActivity : AppCompatActivity() {
             commit()
         }
     }
-    private fun makeCurrentFragmentLtR(fragment: Fragment) {
+    private fun makeCurrentFragmentAnim(fragment: Fragment) {
         supportFragmentManager.beginTransaction().apply {
             setCustomAnimations(
                 R.animator.slide_in_left,
-                R.animator.slide_out_right, 0, 0
+                R.animator.slide_out_right,R.animator.slide_out_right,  R.animator.slide_in_left
             )
             replace(R.id.fl_wrapper, fragment)
             commit()
         }
     }
-        private fun makeCurrentFragmentRtL(fragment: Fragment)
+       /* private fun makeCurrentFragmentRtL(fragment: Fragment)
         {
             supportFragmentManager.beginTransaction().apply {
                 setCustomAnimations(R.animator.slide_out_right,
                     R.animator.slide_in_left, 0, 0)
                 replace(R.id.fl_wrapper,fragment)
                 commit()
-            }
+            }*/
 
 
 
-    }
+
     }
 
