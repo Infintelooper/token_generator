@@ -19,19 +19,30 @@ class MainActivity : AppCompatActivity() {
         val homeFragment = home()
         val notifyFragment = notify()
         val profileFragment = profile()
+        var pageno = 1
 
         makeCurrentFragment(homeFragment)
         home_icon.setOnClickListener(){
-            makeCurrentFragmentAnim2(homeFragment)
+            pageno = 1
+            makeCurrentFragmentAnimRtoL(homeFragment)
         }
         history_icon.setOnClickListener(){
-            makeCurrentFragmentAnim(clockFragment)
+            if(pageno<2)
+                makeCurrentFragmentAnimLtR(clockFragment)
+            else
+                makeCurrentFragmentAnimRtoL(clockFragment)
+            pageno = 2
         }
         notification_icon.setOnClickListener(){
-            makeCurrentFragmentAnim(notifyFragment)
+            if(pageno <3)
+                makeCurrentFragmentAnimLtR(notifyFragment)
+            else
+                makeCurrentFragmentAnimRtoL(notifyFragment)
+            pageno = 3
         }
         profile_icon.setOnClickListener(){
-            makeCurrentFragmentAnim(profileFragment)
+            pageno = 4
+            makeCurrentFragmentAnimLtR(profileFragment)
         }
 
     }
@@ -41,7 +52,7 @@ class MainActivity : AppCompatActivity() {
             commit()
         }
     }
-    private fun makeCurrentFragmentAnim(fragment: Fragment) {
+    private fun makeCurrentFragmentAnimLtR(fragment: Fragment) {
         supportFragmentManager.beginTransaction().apply {
             setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left,
                 0, 0)
@@ -49,7 +60,7 @@ class MainActivity : AppCompatActivity() {
             commit()
         }
     }
-    private fun makeCurrentFragmentAnim2(fragment: Fragment) {
+    private fun makeCurrentFragmentAnimRtoL(fragment: Fragment) {
         supportFragmentManager.beginTransaction().apply {
             setCustomAnimations(R.animator.slide_in_right, R.animator.slide_out_right,
                 0, 0)
