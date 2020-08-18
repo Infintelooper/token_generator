@@ -22,11 +22,25 @@ class MainActivity : AppCompatActivity() {
         var pageno = 1
 
         makeCurrentFragment(homeFragment)
+        home_icon.setImageResource(R.drawable.ic_homeb)
+
         home_icon.setOnClickListener(){
+
+            home_icon.setImageResource(R.drawable.ic_homeb)
+            history_icon.setImageResource(R.drawable.ic_history_icon)
+            notification_icon.setImageResource(R.drawable.ic_notification_icon)
+            profile_icon.setImageResource(R.drawable.ic_profile_icon)
+
             pageno = 1
             makeCurrentFragmentAnimRtoL(homeFragment)
         }
         history_icon.setOnClickListener(){
+
+            history_icon.setImageResource(R.drawable.ic_historyb)
+            home_icon.setImageResource(R.drawable.ic_home_icon)
+            notification_icon.setImageResource(R.drawable.ic_notification_icon)
+            profile_icon.setImageResource(R.drawable.ic_profile_icon)
+
             if(pageno<2)
                 makeCurrentFragmentAnimLtR(clockFragment)
             else
@@ -34,6 +48,12 @@ class MainActivity : AppCompatActivity() {
             pageno = 2
         }
         notification_icon.setOnClickListener(){
+
+            notification_icon.setImageResource(R.drawable.ic_notifyb)
+            home_icon.setImageResource(R.drawable.ic_home_icon)
+            history_icon.setImageResource(R.drawable.ic_history_icon)
+            profile_icon.setImageResource(R.drawable.ic_profile_icon)
+
             if(pageno <3)
                 makeCurrentFragmentAnimLtR(notifyFragment)
             else
@@ -41,6 +61,12 @@ class MainActivity : AppCompatActivity() {
             pageno = 3
         }
         profile_icon.setOnClickListener(){
+
+            profile_icon.setImageResource(R.drawable.ic_profileb)
+            home_icon.setImageResource(R.drawable.ic_home_icon)
+            history_icon.setImageResource(R.drawable.ic_history_icon)
+            notification_icon.setImageResource(R.drawable.ic_notification_icon)
+
             pageno = 4
             makeCurrentFragmentAnimLtR(profileFragment)
         }
