@@ -42,7 +42,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Clock Page"
+        android:text="Notify Page"
         android:textSize="40sp"
         android:fontFamily="@font/bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
