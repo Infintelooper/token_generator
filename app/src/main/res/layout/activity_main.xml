@@ -53,6 +53,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         android:background="@drawable/page_select_bar"
+        android:scaleX="@android:integer/status_bar_notification_info_maxnum"
         tools:targetApi="lollipop" />
 
     <!--
