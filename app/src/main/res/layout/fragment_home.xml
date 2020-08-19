@@ -95,6 +95,19 @@
         android:contentDescription="@string/desc" />
 
     <ImageView
+        android:id="@+id/token_machine_shadow"
+        android:layout_width="289dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/desc"
+        android:rotation="180"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:srcCompat="@drawable/shadow"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
         android:id="@+id/token_machine"
         android:layout_width="289dp"
         android:layout_height="73dp"

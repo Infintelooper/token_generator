@@ -42,6 +42,20 @@
         app:layout_constraintGuide_begin="60dp" />
 
     <ImageView
+        android:id="@+id/shadow"
+        android:layout_width="409dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="705dp"
+        android:background="@drawable/shadow"
+        android:contentDescription="@string/desc"
+        android:scaleX="@android:integer/status_bar_notification_info_maxnum"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fl_wrapper"
+        tools:targetApi="lollipop" />
+
+    <ImageView
         android:id="@+id/page_select_bar"
         android:layout_width="409dp"
         android:layout_height="70dp"
