@@ -52,22 +52,6 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="60dp" />
 
-
-
-    <!--
-
-
-
-        android:layout_marginBottom="461dp"
-        ->android:contentDescription="@string/desc"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/shop_select_ber"
-        app:srcCompat="@drawable/token_machine_bar"
-        tools:ignore="VectorDrawableCompat"
-    -->
-
     <ImageView
         android:id="@+id/tap_message"
         android:layout_width="wrap_content"
@@ -80,22 +64,6 @@
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/token_machine"
         app:srcCompat="@drawable/tap_message" />
-
-
-
-    <ImageView
-        android:id="@+id/token_machine"
-        android:layout_width="289dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="461dp"
-        android:contentDescription="@string/desc"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/shop_select_ber"
-        app:srcCompat="@drawable/token_machine_bar"
-        tools:ignore="VectorDrawableCompat" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -114,5 +82,82 @@
         android:layout_marginEnd="284dp"
         android:contentDescription="@string/desc" />
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.724"
+        app:srcCompat="@drawable/token_slip"
+        android:contentDescription="@string/desc" />
+
+    <ImageView
+        android:id="@+id/token_machine"
+        android:layout_width="289dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="461dp"
+        android:contentDescription="@string/desc"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/shop_select_ber"
+        app:srcCompat="@drawable/token_machine_bar"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/token"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="212.2dp"
+        android:layout_marginBottom="212.2dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginRight="72dp"
+        android:text="@string/token"
+        android:fontFamily="@font/black"
+        android:textSize="85sp"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/token_machine"
+        app:layout_constraintVertical_bias="0.073" />
+
+    <TextView
+        android:id="@+id/token_id"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_marginBottom="361.4dp"
+        android:layout_marginTop="142.1dp"
+        android:layout_marginRight="103dp"
+        android:layout_marginLeft="103dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/id"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+    <TextView
+        android:id="@+id/token_time"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_marginBottom="147.4dp"
+        android:layout_marginTop="359.1dp"
+        android:layout_marginRight="103dp"
+        android:layout_marginLeft="103dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

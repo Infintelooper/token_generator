@@ -46,109 +46,69 @@
         android:layout_width="409dp"
         android:layout_height="70dp"
         android:layout_marginTop="777dp"
+        android:background="@drawable/page_select_bar"
         android:contentDescription="@string/desc"
+        android:scaleX="@android:integer/status_bar_notification_info_maxnum"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        android:background="@drawable/page_select_bar"
-        android:scaleX="@android:integer/status_bar_notification_info_maxnum"
         tools:targetApi="lollipop" />
 
-    <!--
-
-
-
-        android:layout_marginBottom="461dp"
-        ->android:contentDescription="@string/desc"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/shop_select_ber"
-        app:srcCompat="@drawable/token_machine_bar"
-        tools:ignore="VectorDrawableCompat"
-    -->
-
-
-    <ImageView
-        android:id="@+id/home_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:layout_marginBottom="25.3dp"
-        android:layout_marginLeft="65dp"
-        android:layout_marginRight="323dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.156"
-        app:layout_constraintStart_toStartOf="@+id/page_select_bar"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
-        app:layout_constraintVertical_bias="0.511"
-        app:srcCompat="@drawable/ic_home_icon"
-        tools:ignore="VectorDrawableCompat"
-        android:contentDescription="@string/desc"
-        android:layout_marginStart="65dp"
-        android:layout_marginEnd="323dp" />
-
-    <ImageView
-        android:id="@+id/history_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:layout_marginBottom="25dp"
-        android:layout_marginRight="235dp"
-        android:layout_marginLeft="153dp"
-        android:contentDescription="@string/desc"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/page_select_bar"
-        app:layout_constraintHorizontal_bias="0.396"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
-        app:layout_constraintVertical_bias="0.422"
-        app:srcCompat="@drawable/ic_history_icon"
-        tools:ignore="VectorDrawableCompat"
-        android:layout_marginStart="153dp"
-        android:layout_marginEnd="235dp" />
-
-    <ImageView
-        android:id="@+id/notification_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:layout_marginBottom="25.3dp"
-        android:layout_marginLeft="241dp"
-        android:layout_marginRight="153dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/page_select_bar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
-        app:layout_constraintVertical_bias="0.465"
-        app:srcCompat="@drawable/ic_notification_icon"
-        tools:ignore="VectorDrawableCompat"
-        android:contentDescription="@string/desc"
-        android:layout_marginEnd="153dp"
-        android:layout_marginStart="241dp" />
 
     <ImageView
         android:id="@+id/profile_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:layout_marginBottom="25dp"
-        android:layout_marginRight="65dp"
-        android:layout_marginLeft="325dp"
+        android:contentDescription="@string/desc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.753"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/notification_icon"
         app:layout_constraintTop_toTopOf="@+id/guideline3"
-        app:layout_constraintVertical_bias="0.488"
         app:srcCompat="@drawable/ic_profile_icon"
-        tools:ignore="VectorDrawableCompat"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/home_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:contentDescription="@string/desc"
-        android:layout_marginEnd="65dp"
-        android:layout_marginStart="325dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/history_icon"
+        app:layout_constraintEnd_toStartOf="@+id/history_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/history_icon"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_home_icon"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/history_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/desc"
+        app:layout_constraintBottom_toBottomOf="@+id/notification_icon"
+        app:layout_constraintEnd_toStartOf="@+id/notification_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/home_icon"
+        app:layout_constraintTop_toTopOf="@+id/notification_icon"
+        app:srcCompat="@drawable/ic_history_icon"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/notification_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/desc"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_icon"
+        app:layout_constraintEnd_toStartOf="@+id/profile_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/history_icon"
+        app:layout_constraintTop_toTopOf="@+id/profile_icon"
+        app:srcCompat="@drawable/ic_notification_icon"
+        tools:ignore="VectorDrawableCompat" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
