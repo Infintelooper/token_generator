@@ -17,11 +17,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val clockFragment= clock()
         val homeFragment = home()
+        val slipFragment = slip()
         val notifyFragment = notify()
         val profileFragment = profile()
         var pageno = 1
 
-        makeCurrentFragment(homeFragment)
+        makeCurrentFragment(homeFragment,slipFragment)
         home_icon.setImageResource(R.drawable.ic_homeb)
 
         home_icon.setOnClickListener(){
@@ -72,9 +73,9 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-    private fun makeCurrentFragment(fragment: Fragment) {
+    private fun makeCurrentFragment(fragment1: Fragment,fragment2: Fragment) {
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fl_wrapper, fragment)
+            replace(R.id.fl_wrapper, fragment1)
             commit()
         }
     }
