@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="40dp" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="69dp" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="60dp" />
+
+    <ImageView
+        android:id="@+id/tap_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="153dp"
+        android:contentDescription="@string/desc"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:srcCompat="@drawable/tap_message" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.724"
+        app:srcCompat="@drawable/token_slip"
+        android:contentDescription="@string/desc" />
+
+    <TextView
+        android:id="@+id/token"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="72dp"
+        android:layout_marginRight="72dp"
+        android:layout_marginBottom="212.2dp"
+        android:fontFamily="@font/black"
+        android:text="@string/token"
+        android:textColor="@color/colorPrimary"
+        android:textSize="85sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintStart_toStartOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/token_id"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_marginBottom="361.4dp"
+        android:layout_marginTop="142.1dp"
+        android:layout_marginRight="103dp"
+        android:layout_marginLeft="103dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/id"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+    <TextView
+        android:id="@+id/token_time"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_marginBottom="147.4dp"
+        android:layout_marginTop="359.1dp"
+        android:layout_marginRight="103dp"
+        android:layout_marginLeft="103dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/token_machine_shadow"
+        android:layout_width="289dp"
+        android:layout_height="73dp"
+        android:contentDescription="@string/desc"
+        android:rotation="180"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.313"
+        app:srcCompat="@drawable/shadow"
+        tools:ignore="VectorDrawableCompat" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
