@@ -3,85 +3,54 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="265dp"
     android:background="@color/lightgray"
     tools:context=".MainActivity">
 
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="40dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="40dp" />
-
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="69dp" />
 
     <ImageView
         android:id="@+id/shop_select_ber"
         android:layout_width="332dp"
         android:layout_height="54dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="629dp"
         android:contentDescription="@string/desc"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintBottom_toTopOf="@+id/token_machine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/shop_select_bar"
-        tools:targetApi="lollipop"/>
+        tools:targetApi="lollipop" />
 
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="60dp" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="7dp"
-        android:layout_marginRight="284dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/shop_select_ber"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/shop_select_ber"
-        app:srcCompat="@drawable/shop_icon"
         android:layout_marginStart="7dp"
-        android:layout_marginEnd="284dp"
-        android:contentDescription="@string/desc" />
-
-
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="5dp"
+        android:contentDescription="@string/desc"
+        app:layout_constraintBottom_toBottomOf="@+id/shop_select_ber"
+        app:layout_constraintEnd_toEndOf="@+id/shop_select_ber"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/shop_select_ber"
+        app:layout_constraintTop_toTopOf="@+id/shop_select_ber"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/shop_icon"
+        android:layout_marginEnd="20dp" />
 
     <ImageView
         android:id="@+id/token_machine"
         android:layout_width="289dp"
         android:layout_height="73dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="461dp"
         android:contentDescription="@string/desc"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/shop_select_ber"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/token_machine_bar"
         tools:ignore="VectorDrawableCompat" />
 

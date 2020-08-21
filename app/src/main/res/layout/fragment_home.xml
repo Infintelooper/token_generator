@@ -13,12 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/mediumgray"/>
+
     <FrameLayout
         android:id="@+id/fl_wrapperz"
         android:layout_width="match_parent"
-        android:layout_height="236dp"
-        app:layout_constraintTop_toTopOf="@+id/guideline4"
-        android:background="@color/hardgray"/>
+        android:layout_height="265dp"
+        android:background="@color/hardgray"
+        app:layout_constraintTop_toTopOf="@+id/fl_wrapperzz" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
