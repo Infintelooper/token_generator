@@ -3,12 +3,8 @@ package com.cleancodec.tokengenerator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.cleancodec.tokengenerator.fragment.*
 import kotlinx.android.synthetic.main.activity_main.*
-
-import com.cleancodec.tokengenerator.fragment.clock
-import com.cleancodec.tokengenerator.fragment.home
-import com.cleancodec.tokengenerator.fragment.notify
-import com.cleancodec.tokengenerator.fragment.profile
 
 
 class MainActivity : AppCompatActivity() {
@@ -17,12 +13,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val clockFragment= clock()
         val homeFragment = home()
-        val slipFragment = slip()
         val notifyFragment = notify()
         val profileFragment = profile()
+
+        val slipFragment = slip()
+        val topFragment = top()
         var pageno = 1
 
-        makeCurrentFragment(homeFragment,slipFragment)
+        makeCurrentFragment(homeFragment)
+        setupHome(topFragment,slipFragment)
+
         home_icon.setImageResource(R.drawable.ic_homeb)
 
         home_icon.setOnClickListener(){
@@ -73,9 +73,9 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-    private fun makeCurrentFragment(fragment1: Fragment,fragment2: Fragment) {
+    private fun makeCurrentFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fl_wrapper, fragment1)
+            replace(R.id.fl_wrapper, fragment)
             commit()
         }
     }
@@ -89,18 +89,21 @@ class MainActivity : AppCompatActivity() {
     }
     private fun makeCurrentFragmentAnimRtoL(fragment: Fragment) {
         supportFragmentManager.beginTransaction().apply {
-            setCustomAnimations(R.animator.slide_in_right, R.animator.slide_out_right,
-                0, 0)
+            setCustomAnimations(
+                R.animator.slide_in_right, R.animator.slide_out_right,
+                0, 0
+            )
             replace(R.id.fl_wrapper, fragment)
             commit()
         }
     }
-
-
-
-
-
-
+        private fun setupHome(fragment1: Fragment,fragment2: Fragment){
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fl_wrapperz, fragment1)
+                replace(R.id.fl_wrapperzz, fragment2)
+                commit()
+            }
+        }
 
 
     }
