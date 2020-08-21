@@ -14,6 +14,7 @@ class login : AppCompatActivity() {
 
         val loadingDialog =LoadingDialog(myActivity = this)
 
+
         login_button.setOnClickListener {
             loadingDialog.startLoadingDialog()
             Handler(Looper.getMainLooper()).postDelayed({
@@ -28,5 +29,9 @@ class login : AppCompatActivity() {
         val intent = Intent(this, MainActivity::class.java)
         // start your next activity
         startActivity(intent)
+        overridePendingTransition(R.anim.slide_out_bottom, R.anim.slide_in_bottom)
+        //var options = activityOptions.makeSceneTransitionAnimation()
+        //var options = ActivityOptions.makeSceneTransitionAnimation(MainActivity)
+        //var options = ActivityOptions.makeSceneTransitionAnimation()
     }
 }
