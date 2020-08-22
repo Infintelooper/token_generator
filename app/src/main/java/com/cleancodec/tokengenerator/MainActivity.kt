@@ -2,6 +2,7 @@ package com.cleancodec.tokengenerator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import com.cleancodec.tokengenerator.fragment.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -16,16 +17,15 @@ class MainActivity : AppCompatActivity() {
         val notifyFragment = notify()
         val profileFragment = profile()
 
-        val slipFragment = slip()
-        val topFragment = top()
         var pageno = 1
 
         makeCurrentFragment(homeFragment)
-        setupHome(topFragment,slipFragment)
+        setupHome()
+
 
         home_icon.setImageResource(R.drawable.ic_homeb)
 
-        home_icon.setOnClickListener(){
+        home_icon.setOnClickListener {
 
             home_icon.setImageResource(R.drawable.ic_homeb)
             history_icon.setImageResource(R.drawable.ic_history_icon)
@@ -34,8 +34,10 @@ class MainActivity : AppCompatActivity() {
 
             pageno = 1
             makeCurrentFragmentAnimRtoL(homeFragment)
+            setupHome()  // issue
+
         }
-        history_icon.setOnClickListener(){
+        history_icon.setOnClickListener {
 
             history_icon.setImageResource(R.drawable.ic_historyb)
             home_icon.setImageResource(R.drawable.ic_home_icon)
@@ -48,7 +50,7 @@ class MainActivity : AppCompatActivity() {
                 makeCurrentFragmentAnimRtoL(clockFragment)
             pageno = 2
         }
-        notification_icon.setOnClickListener(){
+        notification_icon.setOnClickListener {
 
             notification_icon.setImageResource(R.drawable.ic_notifyb)
             home_icon.setImageResource(R.drawable.ic_home_icon)
@@ -61,7 +63,7 @@ class MainActivity : AppCompatActivity() {
                 makeCurrentFragmentAnimRtoL(notifyFragment)
             pageno = 3
         }
-        profile_icon.setOnClickListener(){
+        profile_icon.setOnClickListener {
 
             profile_icon.setImageResource(R.drawable.ic_profileb)
             home_icon.setImageResource(R.drawable.ic_home_icon)
@@ -97,13 +99,17 @@ class MainActivity : AppCompatActivity() {
             commit()
         }
     }
-        private fun setupHome(fragment1: Fragment,fragment2: Fragment){
+        private fun setupHome(){
+            val slipFragment = slip()
+            val topFragment = top()
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fl_wrapperz, fragment1)
-                replace(R.id.fl_wrapperzz, fragment2)
+                Log.i("My log message","is this")
+                replace(R.id.fl_wrapperz, topFragment)
+                replace(R.id.fl_wrapperzz, slipFragment)
                 commit()
             }
         }
+
 
 
     }
