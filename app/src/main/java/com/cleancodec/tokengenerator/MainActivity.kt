@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
         val profileFragment = profile()
 
         var pageno = 1
-
         makeCurrentFragment(homeFragment)
         setupHome()
 
