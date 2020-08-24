@@ -76,7 +76,10 @@ class slip : Fragment() {
         tap_message.visibility = View.GONE
         val anim = AnimationUtils.loadAnimation(activity?.applicationContext,R.anim.interpolator_accelerate_decelerate)
         anim.fillAfter = true
-        token_slip.startAnimation(anim)
+        fl_slip.startAnimation(anim)
+        //token.startAnimation(anim)
+        //token_id.startAnimation(anim)
+        //token_time.startAnimation(anim)
     }
     companion object {
         /**

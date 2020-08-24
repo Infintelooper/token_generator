@@ -102,10 +102,12 @@ class MainActivity : AppCompatActivity() {
         private fun setupHome(){
             val slipFragment = slip()
             val topFragment = top()
+            val slipsheetFragment = slip_sheet()
             supportFragmentManager.beginTransaction().apply {
                 Log.i("My log message","is this")
                 replace(R.id.fl_wrapperz, topFragment)
                 replace(R.id.fl_wrapperzz, slipFragment)
+                replace(R.id.fl_slip,slipsheetFragment)
                 commit()
             }
         }

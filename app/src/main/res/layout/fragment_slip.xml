@@ -7,6 +7,16 @@
     android:background="@color/lightgray"
     tools:context=".MainActivity">
 
+    <FrameLayout
+        android:id="@+id/fl_slip"
+        android:layout_width="350dp"
+        android:layout_height="550dp"
+        android:layout_marginBottom="364dp"
+        android:background="@color/hardgray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -38,6 +48,8 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="60dp" />
 
+
+
     <ImageView
         android:id="@+id/tap_message"
         android:layout_width="wrap_content"
@@ -52,65 +64,6 @@
         app:layout_constraintVertical_bias="0.977"
         app:srcCompat="@drawable/tap_message" />
 
-    <ImageView
-        android:id="@+id/token_slip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="380dp"
-        android:contentDescription="@string/desc"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/token_slip" />
-
-    <TextView
-        android:id="@+id/token"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="72dp"
-        android:layout_marginRight="72dp"
-        android:layout_marginBottom="212.2dp"
-        android:fontFamily="@font/black"
-        android:text="@string/token"
-        android:textColor="@color/colorPrimary"
-        android:textSize="85sp"
-        app:layout_constraintBottom_toBottomOf="@+id/token_slip"
-        app:layout_constraintEnd_toEndOf="@+id/token_slip"
-        app:layout_constraintHorizontal_bias="0.619"
-        app:layout_constraintStart_toStartOf="@+id/token_slip" />
-
-    <TextView
-        android:id="@+id/token_id"
-        android:fontFamily="@font/regular"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:layout_marginBottom="361.4dp"
-        android:layout_marginTop="142.1dp"
-        android:layout_marginRight="103dp"
-        android:layout_marginLeft="103dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/id"
-        app:layout_constraintBottom_toBottomOf="@+id/token_slip"
-        app:layout_constraintEnd_toEndOf="@+id/token_slip"
-        app:layout_constraintStart_toStartOf="@+id/token_slip"
-        app:layout_constraintTop_toTopOf="@+id/token_slip" />
-    <TextView
-        android:id="@+id/token_time"
-        android:fontFamily="@font/regular"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:layout_marginBottom="147.4dp"
-        android:layout_marginTop="359.1dp"
-        android:layout_marginRight="103dp"
-        android:layout_marginLeft="103dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/time"
-        app:layout_constraintBottom_toBottomOf="@+id/token_slip"
-        app:layout_constraintEnd_toEndOf="@+id/token_slip"
-        app:layout_constraintStart_toStartOf="@+id/token_slip"
-        app:layout_constraintTop_toTopOf="@+id/token_slip" />
 
     <ImageView
         android:id="@+id/token_machine_shadow"
@@ -122,7 +75,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline4"
-        app:layout_constraintVertical_bias="0.313"
+        app:layout_constraintVertical_bias="0.29"
         app:srcCompat="@drawable/shadow"
         tools:ignore="VectorDrawableCompat" />
 

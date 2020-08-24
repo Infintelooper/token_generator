@@ -17,7 +17,7 @@
     <FrameLayout
         android:id="@+id/fl_wrapperz"
         android:layout_width="match_parent"
-        android:layout_height="265dp"
+        android:layout_height="250dp"
         android:background="@color/hardgray"
         app:layout_constraintTop_toTopOf="@+id/fl_wrapperzz" />
 

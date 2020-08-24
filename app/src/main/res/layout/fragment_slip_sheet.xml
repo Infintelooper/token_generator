@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="550dp"
+    android:background="@color/lightgray"
+    tools:context=".MainActivity">
+
+
+
+
+    <ImageView
+        android:id="@+id/token_slip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/desc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/token_slip" />
+
+
+    <TextView
+        android:id="@+id/token"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/black"
+        android:text="@string/token"
+        android:textColor="@color/colorPrimary"
+        android:textSize="85sp"
+        app:layout_constraintBottom_toBottomOf="@+id/token_slip"
+        app:layout_constraintEnd_toEndOf="@+id/token_slip"
+        app:layout_constraintStart_toStartOf="@+id/token_slip"
+        app:layout_constraintTop_toTopOf="@+id/token_slip" />
+
+    <TextView
+        android:id="@+id/token_id"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_marginBottom="361.4dp"
+        android:layout_marginTop="142.1dp"
+        android:layout_marginRight="103dp"
+        android:layout_marginLeft="103dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/id"
+        app:layout_constraintBottom_toBottomOf="@+id/token_slip"
+        app:layout_constraintEnd_toEndOf="@+id/token_slip"
+        app:layout_constraintStart_toStartOf="@+id/token_slip"
+        app:layout_constraintTop_toTopOf="@+id/token_slip" />
+    <TextView
+        android:id="@+id/token_time"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_marginBottom="147.4dp"
+        android:layout_marginTop="359.1dp"
+        android:layout_marginRight="103dp"
+        android:layout_marginLeft="103dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time"
+        app:layout_constraintBottom_toBottomOf="@+id/token_slip"
+        app:layout_constraintEnd_toEndOf="@+id/token_slip"
+        app:layout_constraintStart_toStartOf="@+id/token_slip"
+        app:layout_constraintTop_toTopOf="@+id/token_slip" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
