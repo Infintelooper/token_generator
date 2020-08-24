@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.cleancodec.tokengenerator.fragment
 
 import android.os.Bundle
@@ -30,7 +32,6 @@ class slip : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-
     }
 
     override fun onCreateView(
@@ -52,10 +53,20 @@ class slip : Fragment() {
     {
         val anim = AnimationUtils.loadAnimation(activity?.applicationContext,R.anim.fade_out)
         tap_message.startAnimation(anim)
-        tap_message.visibility = View.GONE
+        Handler().postDelayed({
+            Change()
+        }, 1000)
+        //tap_message.visibility = View.GONE
+    }
+    private fun Rotate()
+    {
+        val anim = AnimationUtils.loadAnimation(activity?.applicationContext,R.anim.rotate_indefinitely)
+        tap_message.startAnimation(anim)
+        //tap_message.visibility = View.GONE
     }
     private fun Change(){
         tap_message.setImageResource(R.drawable.ic_loading)
+        Rotate()
     }
     companion object {
         /**
