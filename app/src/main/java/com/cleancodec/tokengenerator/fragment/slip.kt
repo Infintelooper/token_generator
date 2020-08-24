@@ -44,9 +44,7 @@ class slip : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         tap_message.setOnClickListener{
-            //Log.i("Hai","There")
             AnimateFO()
-            //Change()
         }
 
     }
