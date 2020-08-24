@@ -1,18 +1,16 @@
 package com.cleancodec.tokengenerator.fragment
 
 import android.os.Bundle
-import android.util.Log
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import com.cleancodec.tokengenerator.R
 import kotlinx.android.synthetic.main.fragment_slip.*
 
 // TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
@@ -46,8 +44,20 @@ class slip : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         tap_message.setOnClickListener{
-            Log.i("Hai","There")
+            //Log.i("Hai","There")
+            AnimateFO()
+            //Change()
         }
+
+    }
+    private fun AnimateFO()
+    {
+        val anim = AnimationUtils.loadAnimation(activity?.applicationContext,R.anim.fade_out)
+        tap_message.startAnimation(anim)
+        tap_message.visibility = View.GONE
+    }
+    private fun Change(){
+        tap_message.setImageResource(R.drawable.ic_loading)
     }
     companion object {
         /**
