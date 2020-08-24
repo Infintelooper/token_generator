@@ -55,18 +55,28 @@ class slip : Fragment() {
         tap_message.startAnimation(anim)
         Handler().postDelayed({
             Change()
-        }, 1000)
+        }, 600)
         //tap_message.visibility = View.GONE
     }
     private fun Rotate()
     {
         val anim = AnimationUtils.loadAnimation(activity?.applicationContext,R.anim.rotate_indefinitely)
         tap_message.startAnimation(anim)
-        //tap_message.visibility = View.GONE
+        Handler().postDelayed({
+            interpolator_anticipate_overshoot()
+        }, 1000)
+
     }
     private fun Change(){
         tap_message.setImageResource(R.drawable.ic_loading)
         Rotate()
+    }
+    private fun interpolator_anticipate_overshoot()
+    {
+        tap_message.visibility = View.GONE
+        val anim = AnimationUtils.loadAnimation(activity?.applicationContext,R.anim.interpolator_accelerate_decelerate)
+        anim.fillAfter = true
+        token_slip.startAnimation(anim)
     }
     companion object {
         /**
