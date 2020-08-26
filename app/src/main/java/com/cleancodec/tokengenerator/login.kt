@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.fragment_mobile.*
 
 class login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,7 +16,7 @@ class login : AppCompatActivity() {
         val loadingDialog =LoadingDialog(myActivity = this)
 
 
-        login_button.setOnClickListener {
+        getotpbutton.setOnClickListener {
             loadingDialog.startLoadingDialog()
             Handler(Looper.getMainLooper()).postDelayed({
                 successLogin()

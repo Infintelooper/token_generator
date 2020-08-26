@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "230300948713",
+    "firebase_url": "https://token-generator-9d7b9.firebaseio.com",
+    "project_id": "token-generator-9d7b9",
+    "storage_bucket": "token-generator-9d7b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230300948713:android:8d158488bc7094c04a7878",
+        "android_client_info": {
+          "package_name": "com.cleancodec.tokengenerator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "230300948713-0ciqe88augtlr4mn4g0tgmrtvub02ojn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_5OnMz1PjrBh2_CS4FviKZ-3hXJATxJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "230300948713-0ciqe88augtlr4mn4g0tgmrtvub02ojn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
