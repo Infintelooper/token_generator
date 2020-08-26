@@ -123,7 +123,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="424dp"
         android:layout_marginBottom="400dp"
-        android:fontFamily="@font/bold"
+        android:fontFamily="@font/regular"
         android:text=" +91- "
         android:textColor="@color/colorPrimary"
         android:textSize="17sp"
