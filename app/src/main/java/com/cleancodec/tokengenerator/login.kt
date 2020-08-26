@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.fragment_mobile.*
 
@@ -13,9 +14,11 @@ class login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val loadingDialog =LoadingDialog(myActivity = this)
+        val nameFragment = name()
 
-
+        makeCurrentFragment(nameFragment)
+        //val loadingDialog =LoadingDialog(myActivity = this)
+        /*
         getotpbutton.setOnClickListener {
             loadingDialog.startLoadingDialog()
             Handler(Looper.getMainLooper()).postDelayed({
@@ -23,6 +26,13 @@ class login : AppCompatActivity() {
                 loadingDialog.dissmissDialog()     /// need to add changes on OTP confirmation
 
             }, 5000)
+        }
+        */
+    }
+    private fun makeCurrentFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.cl_wrapper, fragment)
+            commit()
         }
     }
     fun successLogin()

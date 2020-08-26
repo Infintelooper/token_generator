@@ -28,7 +28,7 @@
         android:fontFamily="@font/regular"
         android:text="Verify"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/getotpbutton"
         app:layout_constraintEnd_toEndOf="@+id/getotpbutton"
         app:layout_constraintStart_toStartOf="@+id/getotpbutton"
