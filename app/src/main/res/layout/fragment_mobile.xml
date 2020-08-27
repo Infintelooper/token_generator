@@ -94,38 +94,30 @@
         android:id="@+id/msg2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="155dp"
-        android:layout_marginLeft="155dp"
-        android:layout_marginTop="424dp"
-        android:layout_marginEnd="74dp"
-        android:layout_marginRight="74dp"
-        android:layout_marginBottom="400dp"
         android:fontFamily="@font/regular"
         android:text=" will be sent to "
         android:textColor="@color/hardgray"
         android:textSize="17sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintBottom_toBottomOf="@+id/msg1"
         app:layout_constraintStart_toEndOf="@+id/msg1"
-        app:layout_constraintStart_toStartOf="@+id/msg1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintTop_toTopOf="@+id/msg1"
+        tools:ignore="HardcodedText,MissingConstraints" />
 
     <TextView
         android:id="@+id/msg3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="91dp"
-        android:layout_marginRight="91dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginRight="88dp"
         android:fontFamily="@font/regular"
         android:text="this number"
         android:textColor="@color/hardgray"
         android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/msg2"
         app:layout_constraintEnd_toEndOf="@+id/msg2"
         app:layout_constraintTop_toBottomOf="@+id/msg1"
+        app:layout_constraintVertical_bias="0.258"
         tools:ignore="HardcodedText" />
 
     <TextView
@@ -161,19 +153,19 @@
         android:id="@+id/backarrow1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="52.5dp"
-        android:layout_marginTop="94.5dp"
-        android:layout_marginRight="325.5dp"
-        android:layout_marginBottom="730.6dp"
-        android:layout_marginEnd="325.5dp"
-        android:layout_marginStart="52.5dp"
+        android:layout_marginLeft="38.5dp"
+        android:layout_marginTop="82.5dp"
+        android:layout_marginRight="353.3dp"
+        android:layout_marginBottom="751.4dp"
         android:contentDescription="@string/desc"
         android:src="@drawable/ic_back_arrow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-         />
+        android:layout_marginEnd="353.3dp"
+        android:layout_marginStart="38.5dp" />
+
 
     <EditText
         android:id="@+id/cno"
