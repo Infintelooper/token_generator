@@ -9,7 +9,7 @@
 
 
     <ImageView
-        android:id="@+id/getotpbutton"
+        android:id="@+id/verifybutton"
         android:layout_width="348dp"
         android:layout_height="62dp"
         android:layout_marginTop="639dp"
@@ -29,10 +29,10 @@
         android:text="Verify"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/getotpbutton"
-        app:layout_constraintEnd_toEndOf="@+id/getotpbutton"
-        app:layout_constraintStart_toStartOf="@+id/getotpbutton"
-        app:layout_constraintTop_toTopOf="@+id/getotpbutton"
+        app:layout_constraintBottom_toBottomOf="@+id/verifybutton"
+        app:layout_constraintEnd_toEndOf="@+id/verifybutton"
+        app:layout_constraintStart_toStartOf="@+id/verifybutton"
+        app:layout_constraintTop_toTopOf="@+id/verifybutton"
         app:layout_constraintVertical_bias="0.533"
         tools:ignore="HardcodedText" />
 
@@ -63,10 +63,10 @@
         android:text="Don't get the OTP ?"
         android:textColor="@color/mediumgray"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/getotpbutton"
-        app:layout_constraintEnd_toEndOf="@+id/getotpbutton"
+        app:layout_constraintBottom_toTopOf="@+id/verifybutton"
+        app:layout_constraintEnd_toEndOf="@+id/verifybutton"
         app:layout_constraintHorizontal_bias="0.302"
-        app:layout_constraintStart_toStartOf="@+id/getotpbutton"
+        app:layout_constraintStart_toStartOf="@+id/verifybutton"
         tools:ignore="HardcodedText" />
 
     <TextView
@@ -146,9 +146,9 @@
         android:id="@+id/otpno"
         android:layout_width="250dp"
         android:layout_height="27dp"
-        android:autofillHints=""
         android:background="@null"
         android:ems="10"
+        android:maxLength="6"
         android:letterSpacing="1.2"
         android:fontFamily="@font/bold"
         android:inputType="phone"
@@ -159,7 +159,8 @@
         app:layout_constraintEnd_toEndOf="@+id/line"
         app:layout_constraintStart_toStartOf="@+id/line"
         tools:ignore="HardcodedText,LabelFor,MissingConstraints"
-        tools:targetApi="lollipop" />
+        tools:targetApi="lollipop"
+        android:autofillHints="" />
 
 
 

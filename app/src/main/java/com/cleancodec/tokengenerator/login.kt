@@ -41,7 +41,7 @@ class login : AppCompatActivity() {
             commit()
         }
     }
-    public fun makeCurrentFragmentAnimLtRl(fragment: Fragment) {
+    fun makeCurrentFragmentAnimLtRl(fragment: Fragment) {
         supportFragmentManager.beginTransaction().apply {
             setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left,
                 0, 0)
@@ -49,7 +49,7 @@ class login : AppCompatActivity() {
             commit()
         }
     }
-    public fun makeCurrentFragmentAnimRtoLl(fragment: Fragment) {
+    fun makeCurrentFragmentAnimRtoLl(fragment: Fragment) {
         supportFragmentManager.beginTransaction().apply {
             setCustomAnimations(
                 R.animator.slide_in_right, R.animator.slide_out_right,
@@ -63,11 +63,7 @@ class login : AppCompatActivity() {
     fun successLogin()
     {
         val intent = Intent(this, MainActivity::class.java)
-        // start your next activity
         startActivity(intent)
         overridePendingTransition(R.anim.slide_out_bottom, R.anim.slide_in_bottom)
-        //var options = activityOptions.makeSceneTransitionAnimation()
-        //var options = ActivityOptions.makeSceneTransitionAnimation(MainActivity)
-        //var options = ActivityOptions.makeSceneTransitionAnimation()
     }
 }

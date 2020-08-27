@@ -44,6 +44,9 @@ class otp : Fragment() {
             val mobileFragment = mobile()
             (activity as login).makeCurrentFragmentAnimRtoLl(mobileFragment)
         }
+        verifybutton.setOnClickListener {
+            (activity as login).successLogin()
+        }
 
         }
 
