@@ -1,6 +1,7 @@
 package com.cleancodec.tokengenerator
 
 import android.os.Bundle
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -34,6 +35,7 @@ class name : Fragment() {
         }
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        warning1.alpha = 0f
         super.onViewCreated(view, savedInstanceState)
         go_button.setOnClickListener{
             if(cname.text.isNotEmpty()) {
@@ -41,7 +43,11 @@ class name : Fragment() {
             }
             else
             {
-                //warning message
+                warning1.alpha = 1f
+                (activity as login).AnimateFadeIn()
+                Handler().postDelayed({
+                    warning1.alpha = 0f
+                }, 2400)
             }
         }
 

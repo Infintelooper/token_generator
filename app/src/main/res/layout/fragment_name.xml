@@ -36,6 +36,21 @@
         tools:ignore="HardcodedText" />
 
     <TextView
+        android:id="@+id/warning1"
+        android:layout_width="173dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/light"
+        android:text="*please enter your name"
+        android:textColor="@color/red"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintStart_toStartOf="@+id/cname"
+        app:layout_constraintTop_toTopOf="@+id/line"
+        tools:ignore="HardcodedText" />
+
+    <TextView
         android:id="@+id/welcomemsg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
