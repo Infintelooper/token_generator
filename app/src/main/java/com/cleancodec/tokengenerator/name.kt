@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import kotlinx.android.synthetic.main.fragment_mobile.*
 import kotlinx.android.synthetic.main.fragment_name.*
 import kotlinx.android.synthetic.main.fragment_slip.*
@@ -28,6 +29,7 @@ class name : Fragment() {
     val mobileFragment = mobile()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        (activity as login).stage = 1
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
@@ -50,11 +52,16 @@ class name : Fragment() {
                 }, 2400)
             }
         }
-
+        view.setOnClickListener {
+            it.hideKeyboard()
+        }
 
 
     }
-
+    fun View.hideKeyboard() {
+        val inputMethodManager = requireContext().getSystemService(android.content.Context.INPUT_METHOD_SERVICE) as? InputMethodManager
+        inputMethodManager?.hideSoftInputFromWindow(this.windowToken, 0)
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

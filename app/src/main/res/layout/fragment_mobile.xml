@@ -22,6 +22,21 @@
         android:contentDescription="@string/desc" />
 
     <TextView
+        android:id="@+id/warning2"
+        android:layout_width="202dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/light"
+        android:text="*please enter mobile number"
+        android:textColor="@color/red"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.681"
+        app:layout_constraintStart_toStartOf="@+id/line"
+        app:layout_constraintTop_toTopOf="@+id/line"
+        tools:ignore="HardcodedText" />
+
+    <TextView
         android:id="@+id/getotpmsg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

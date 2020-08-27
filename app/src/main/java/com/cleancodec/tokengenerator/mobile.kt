@@ -1,11 +1,14 @@
 package com.cleancodec.tokengenerator
 
 import android.os.Bundle
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import kotlinx.android.synthetic.main.fragment_mobile.*
+import kotlinx.android.synthetic.main.fragment_name.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -25,6 +28,7 @@ class mobile : Fragment() {
     val otpFragment = otp()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        (activity as login).stage = 2
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
@@ -42,6 +46,7 @@ class mobile : Fragment() {
         return inflater.inflate(R.layout.fragment_mobile, container, false)
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        warning2.alpha = 0f
         super.onViewCreated(view, savedInstanceState)
         backarrow1.setOnClickListener {
             val nameFragment = name()
@@ -55,9 +60,22 @@ class mobile : Fragment() {
             }
             else
             {
-                //warning message
+                warning2.alpha = 1f
+                (activity as login).AnimateFadeIn()
+                Handler().postDelayed({
+                    warning2.alpha = 0f
+                }, 2400)
             }
         }
+        view.setOnClickListener {
+            it.hideKeyboard()
+        }
+
+
+    }
+    fun View.hideKeyboard() {
+        val inputMethodManager = requireContext().getSystemService(android.content.Context.INPUT_METHOD_SERVICE) as? InputMethodManager
+        inputMethodManager?.hideSoftInputFromWindow(this.windowToken, 0)
     }
 
     companion object {
