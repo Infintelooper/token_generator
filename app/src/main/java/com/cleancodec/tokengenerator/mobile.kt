@@ -22,6 +22,8 @@ class mobile : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    val otpFragment = otp()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -44,6 +46,17 @@ class mobile : Fragment() {
         backarrow1.setOnClickListener {
             val nameFragment = name()
             (activity as login).makeCurrentFragmentAnimRtoLl(nameFragment)
+        }
+        getotpbutton.setOnClickListener{
+            if(cno.text.length == 10)
+            {
+                (activity as login).makeCurrentFragmentAnimLtRl(otpFragment)
+                //code for otp trigger
+            }
+            else
+            {
+                //warning message
+            }
         }
     }
 

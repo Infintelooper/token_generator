@@ -36,8 +36,13 @@ class name : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         go_button.setOnClickListener{
-            if(cname.text.isNotEmpty())
-            (activity as login).makeCurrentFragmentAnimLtRl(mobileFragment)
+            if(cname.text.isNotEmpty()) {
+                (activity as login).makeCurrentFragmentAnimLtRl(mobileFragment)
+            }
+            else
+            {
+                //warning message
+            }
         }
 
 
