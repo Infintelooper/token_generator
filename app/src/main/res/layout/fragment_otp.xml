@@ -135,7 +135,7 @@
 
 
     <ImageView
-        android:id="@+id/backarrow"
+        android:id="@+id/backarrow2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="31.8dp"
