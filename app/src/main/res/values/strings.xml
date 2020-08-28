@@ -11,4 +11,12 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="signed_in">sign in successfully</string>
+    <string name="signed_out">sign out successfully</string>
+    <string name="status_sign_in_failed">status sign in failed</string>
+    <string name="instant_validation">instant validation</string>
+    <string name="status_verification_succeeded">status verification succeeded</string>
+    <string name="status_verification_failed">status verification failed</string>
+    <string name="status_code_sent">status code sent</string>
+    <string name="firebase_status_fmt">firebase status fmt</string>
 </resources>

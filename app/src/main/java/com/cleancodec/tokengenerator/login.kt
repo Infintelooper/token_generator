@@ -3,15 +3,11 @@ package com.cleancodec.tokengenerator
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.view.View
 import android.view.animation.AnimationUtils
-import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_mobile.*
 import kotlinx.android.synthetic.main.fragment_name.*
 import kotlinx.android.synthetic.main.fragment_otp.*
-import kotlinx.android.synthetic.main.fragment_slip.*
 
 class login : AppCompatActivity() {
     var stage = 0
@@ -85,5 +81,7 @@ class login : AppCompatActivity() {
         else if(stage == 3)
             warning3.startAnimation(anim)
     }
+
+
 
 }
