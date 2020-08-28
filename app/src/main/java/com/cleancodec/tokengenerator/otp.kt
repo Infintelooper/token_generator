@@ -2,6 +2,7 @@ package com.cleancodec.tokengenerator
 
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -68,7 +69,7 @@ class otp : Fragment() {
             it.hideKeyboard()
         }
 
-
+        Log.i("this is  that", arguments?.getString("number").toString())
     }
     fun View.hideKeyboard() {
         val inputMethodManager = requireContext().getSystemService(android.content.Context.INPUT_METHOD_SERVICE) as? InputMethodManager
