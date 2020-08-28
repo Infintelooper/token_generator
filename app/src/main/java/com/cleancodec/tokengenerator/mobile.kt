@@ -2,11 +2,13 @@ package com.cleancodec.tokengenerator
 
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
+import com.hbb20.CountryCodePicker
 import kotlinx.android.synthetic.main.fragment_mobile.*
 import kotlinx.android.synthetic.main.fragment_name.*
 
@@ -55,6 +57,9 @@ class mobile : Fragment() {
         getotpbutton.setOnClickListener{
             if(cno.text.length == 10)
             {
+                val _getUserEnteredPhoneNo:String = cno.text.toString()
+                val _phoneNo:String = "+"+country_code_picker.selectedCountryCode+"-"+_getUserEnteredPhoneNo // issue spotted
+                Log.i("String is",_phoneNo)
                 (activity as login).makeCurrentFragmentAnimLtRl(otpFragment)
                 //code for otp trigger
             }
