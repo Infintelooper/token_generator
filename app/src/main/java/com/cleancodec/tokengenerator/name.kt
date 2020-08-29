@@ -7,9 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import kotlinx.android.synthetic.main.fragment_mobile.*
 import kotlinx.android.synthetic.main.fragment_name.*
-import kotlinx.android.synthetic.main.fragment_slip.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

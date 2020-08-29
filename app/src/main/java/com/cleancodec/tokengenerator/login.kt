@@ -60,7 +60,7 @@ class login : AppCompatActivity() {
                 R.animator.slide_in_right, R.animator.slide_out_right,
                 0, 0
             )
-            replace(R.id.cl_wrapper, fragment)
+            add(R.id.cl_wrapper, fragment)
             commit()
         }
     }

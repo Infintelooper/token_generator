@@ -59,12 +59,6 @@ class mobile : Fragment() {
                 val _phoneNo:String = "+"+country_code_picker.selectedCountryCode+"-"+_getUserEnteredPhoneNo
                 (activity as login).makeCurrentFragmentAnimLtRl(otpFragment)
 
-                val ldf = otp()
-                val args = Bundle()
-                args.putString("number",_phoneNo)
-                ldf.arguments = args
-                fragmentManager?.beginTransaction()?.add(R.id.cl_wrapper, ldf)?.commit()
-                //code for otp trigger
             }
             else
             {
