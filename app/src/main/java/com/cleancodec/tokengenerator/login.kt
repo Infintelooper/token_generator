@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.fragment_otp.*
 
 class login : AppCompatActivity() {
     var stage = 0
+    lateinit var _phoneno:String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -80,6 +81,10 @@ class login : AppCompatActivity() {
             warning2.startAnimation(anim)
         else if(stage == 3)
             warning3.startAnimation(anim)
+    }
+    fun passPhoneNo(no:String)
+    {
+        _phoneno = no
     }
 
 

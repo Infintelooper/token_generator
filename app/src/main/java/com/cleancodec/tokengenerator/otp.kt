@@ -2,12 +2,14 @@ package com.cleancodec.tokengenerator
 
 import android.os.Bundle
 import android.os.Handler
+import android.text.SpannableStringBuilder
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
+import kotlinx.android.synthetic.main.fragment_mobile.*
 import kotlinx.android.synthetic.main.fragment_otp.*
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -65,7 +67,8 @@ class otp : Fragment() {
             it.hideKeyboard()
         }
 
-        Log.i("this is  that", arguments?.getString("number").toString())
+        //Log.i("this is  that", (activity as login)._phoneno)
+        phoneno.text = SpannableStringBuilder((activity as login)._phoneno)
     }
     fun View.hideKeyboard() {
         val inputMethodManager = requireContext().getSystemService(android.content.Context.INPUT_METHOD_SERVICE) as? InputMethodManager
