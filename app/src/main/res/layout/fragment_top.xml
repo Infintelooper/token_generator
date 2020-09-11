@@ -54,4 +54,16 @@
         app:srcCompat="@drawable/token_machine_bar"
         tools:ignore="VectorDrawableCompat" />
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/shop_select_ber"
+        app:layout_constraintEnd_toEndOf="@+id/shop_select_ber"
+        app:layout_constraintHorizontal_bias="0.963"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/shop_select_ber"
+        app:srcCompat="@drawable/ic_reload_icon"
+        tools:ignore="ContentDescription,VectorDrawableCompat" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
