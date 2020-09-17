@@ -1,10 +1,15 @@
 package com.cleancodec.tokengenerator
 
+import android.content.ContentValues
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.animation.AnimationUtils
 import androidx.fragment.app.Fragment
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
+import com.google.firebase.auth.PhoneAuthCredential
 import kotlinx.android.synthetic.main.fragment_mobile.*
 import kotlinx.android.synthetic.main.fragment_name.*
 import kotlinx.android.synthetic.main.fragment_otp.*
@@ -12,6 +17,7 @@ import kotlinx.android.synthetic.main.fragment_otp.*
 class login : AppCompatActivity() {
     var stage = 0
     lateinit var _phoneno:String
+    lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -85,6 +91,27 @@ class login : AppCompatActivity() {
     fun passPhoneNo(no:String)
     {
         _phoneno = no
+    }
+    public fun signInTheUserBycredential(credential: PhoneAuthCredential) {
+
+        auth.signInWithCredential(credential)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Sign in success, update UI with the signed-in user's information
+                    successLogin()
+                    Log.d(ContentValues.TAG, "signInWithCredential:success")
+
+                } else {
+                    // Sign in failed, display a message and update the UI
+                    Log.w(ContentValues.TAG, "signInWithCredential:failure", task.exception)
+                    if (task.exception is FirebaseAuthInvalidCredentialsException) {
+                        // The verification code entered was invalid
+                        // [START_EXCLUDE silent]
+                        // [END_EXCLUDE]
+                    }
+                }
+            }
+
     }
 
 
