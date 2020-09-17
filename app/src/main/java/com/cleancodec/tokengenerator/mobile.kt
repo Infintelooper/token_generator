@@ -59,7 +59,7 @@ class mobile : Fragment() {
                 val _phoneNo:String = "+"+country_code_picker.selectedCountryCode+"-"+_getUserEnteredPhoneNo
                 (activity as login).passPhoneNo(_phoneNo)
                 (activity as login).makeCurrentFragmentAnimLtRl(otpFragment)
-
+                //code to login attempt
             }
             else
             {
