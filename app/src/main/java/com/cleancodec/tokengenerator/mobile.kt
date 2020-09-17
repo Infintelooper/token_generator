@@ -56,7 +56,7 @@ class mobile : Fragment() {
             if(cno.text.length == 10)
             {
                 val _getUserEnteredPhoneNo:String = cno.text.toString()
-                val _phoneNo:String = "+"+country_code_picker.selectedCountryCode+"-"+_getUserEnteredPhoneNo
+                val _phoneNo:String = "+"+country_code_picker.selectedCountryCode+_getUserEnteredPhoneNo
                 (activity as login).passPhoneNo(_phoneNo)
                 (activity as login).makeCurrentFragmentAnimLtRl(otpFragment)
                 //code to login attempt

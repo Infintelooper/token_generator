@@ -88,6 +88,8 @@ class otp : Fragment() {
         phoneno.text = SpannableStringBuilder((activity as login)._phoneno)
 
         var phoneNo:String = (activity as login)._phoneno
+        Log.i("this is  that", phoneNo)
+        sentVerificationCodeToUser(phoneNo)
     }
 
     private fun sentVerificationCodeToUser(phoneNo: String) {
@@ -115,6 +117,7 @@ class otp : Fragment() {
             verificationId: String,
             token: PhoneAuthProvider.ForceResendingToken
         )   {
+                Log.i("this is  that", "code sent")
                 verificationCodeBySystem = verificationId
             }
     }
