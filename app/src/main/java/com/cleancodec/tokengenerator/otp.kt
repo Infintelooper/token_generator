@@ -88,7 +88,6 @@ class otp : Fragment() {
         phoneno.text = SpannableStringBuilder((activity as login)._phoneno)
 
         var phoneNo:String = (activity as login)._phoneno
-
     }
 
     private fun sentVerificationCodeToUser(phoneNo: String) {
